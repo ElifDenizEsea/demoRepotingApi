@@ -1,6 +1,7 @@
 C:\opt\demoRepotingApi\src\main\java\com\esea\DemoReportingApiApplication.java
 C:\opt\demoRepotingApi\src\main\java\com\esea\controller\ReportingApiController.java
 C:\opt\demoRepotingApi\src\main\java\com\esea\model\Fx.java
+C:\opt\demoRepotingApi\src\main\java\com\esea\response\TransactionQueryResponse.java
 C:\opt\demoRepotingApi\src\main\java\com\esea\service\CustomerService.java
 C:\opt\demoRepotingApi\src\main\java\com\esea\response\ReportResponse.java
 C:\opt\demoRepotingApi\src\main\java\com\esea\model\MerchantTransaction.java

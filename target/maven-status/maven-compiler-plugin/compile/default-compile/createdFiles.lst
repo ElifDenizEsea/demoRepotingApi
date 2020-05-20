@@ -5,6 +5,7 @@ com\esea\model\Merchant.class
 com\esea\model\User.class
 com\esea\model\Fx.class
 com\esea\model\Report.class
+com\esea\response\TransactionQueryResponse.class
 com\esea\model\Token.class
 com\esea\service\UserService.class
 com\esea\service\CustomerService.class

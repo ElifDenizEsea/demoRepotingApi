@@ -3,24 +3,38 @@ package com.esea.model;
 import java.util.Date;
 
 public class ReportRequest {
-    private Date fromDate;
-    private Date toDate;
+    private String fromDate;
+    private String toDate;
     private String merchant;
     private String acquirer;
 
-    public Date getFromDate() {
+    public ReportRequest() {
+            super();
+    }
+    public ReportRequest(String fromDate, String toDate,String merchant,String acquirer) {
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+        this.merchant = merchant;
+        this.acquirer = acquirer;
+    }
+    public ReportRequest(String fromDate, String toDate) {
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+    }
+
+    public String getFromDate() {
         return fromDate;
     }
 
-    public void setFromDate(Date fromDate) {
+    public void setFromDate(String fromDate) {
         this.fromDate = fromDate;
     }
 
-    public Date getToDate() {
+    public String getToDate() {
         return toDate;
     }
 
-    public void setToDate(Date toDate) {
+    public void setToDate(String toDate) {
         this.toDate = toDate;
     }
 

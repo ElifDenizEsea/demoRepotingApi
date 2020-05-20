@@ -20,6 +20,24 @@ public class MerchantTransaction {
     private String message;
     private String transactionId;
     private Agent agent;
+    private String paymentMethod;
+    private String errorCode;
+
+    public String getErrorCode() {
+        return errorCode;
+    }
+
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
 
     public String getReferenceNo() {
         return referenceNo;

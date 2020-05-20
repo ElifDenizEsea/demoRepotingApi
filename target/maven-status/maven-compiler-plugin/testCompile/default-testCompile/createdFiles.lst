@@ -1,1 +1,3 @@
 com\esea\demoReportingApi\DemoRepotingApiApplicationTests.class
+com\esea\demoReportingApi\ControllerTest.class
+com\esea\demoReportingApi\HttpRequestTest.class

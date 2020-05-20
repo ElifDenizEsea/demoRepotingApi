@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ReportResponse {
     private String status;
-    private List<Report> reportList;
+    private List<Report> response;
 
     public String getStatus() {
         return status;
@@ -16,11 +16,11 @@ public class ReportResponse {
         this.status = status;
     }
 
-    public List<Report> getReportList() {
-        return reportList;
+    public List<Report> getResponse() {
+        return response;
     }
 
-    public void setReportList(List<Report> reportList) {
-        this.reportList = reportList;
+    public void setResponse(List<Report> response) {
+        this.response = response;
     }
 }

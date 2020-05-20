@@ -32,15 +32,20 @@ public class UserService {
         return user;
     }
     public boolean isValidToken(String token){
-        List<User> pList = userData.stream()
-                .filter(p -> p.getToken().getTokenInfo().equalsIgnoreCase(token)
-                      )
-                .collect(Collectors.toList());
-        for(User u:pList){
-            if(u.getToken().getTokenEndDate().after(new Date())){
-                return true;
+        try {
+            List<User> pList = userData.stream()
+                    .filter(p -> p.getToken().getTokenInfo().equalsIgnoreCase(token)
+                    )
+                    .collect(Collectors.toList());
+            for(User u:pList){
+                if(u.getToken().getTokenEndDate().after(new Date())){
+                    return true;
+                }
             }
+        }catch (Exception e){
+
         }
+
         return false;
 
     }
