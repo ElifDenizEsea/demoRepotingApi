@@ -1,2 +1,15 @@
 # Default ignored files
 /workspace.xml
+.class
+.lst
+.idea/
+.classpath
+.project
+.settings/
+target
+*.jar
+*.war
+*.ear
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**

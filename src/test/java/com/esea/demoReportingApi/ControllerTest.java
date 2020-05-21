@@ -4,7 +4,6 @@ import com.esea.controller.ReportingApiController;
 import com.esea.model.*;
 import com.esea.response.LoginResponse;
 import com.esea.response.TransactionQueryResponse;
-import com.esea.service.CustomerService;
 import com.esea.service.TransactionService;
 import com.esea.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -43,12 +42,10 @@ public class ControllerTest {
     @MockBean
     private TransactionService transactionService;
 
-    @MockBean
-    private CustomerService customerService;
 
     @Test
     public void login() throws Exception {
-        User u = new User("elif", "deniz");
+        User u = new User("merchant@test.com", "12345");
         LoginResponse loginResponse = new LoginResponse();
         loginResponse.setToken("dfkdmf");
         loginResponse.setStatus("APPROVED");

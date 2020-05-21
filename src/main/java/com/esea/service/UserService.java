@@ -14,7 +14,7 @@ public class UserService {
     List<User> userData = new ArrayList<>();
 
     UserService() {
-        userData.add(new User("elif", "deniz"));
+        userData.add(new User("merchant@test.com", "12345"));
     }
     public User findUser(String userName, String password){
         List<User> pList = userData.stream()

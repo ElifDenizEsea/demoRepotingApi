@@ -8,7 +8,6 @@ com\esea\model\Report.class
 com\esea\response\TransactionQueryResponse.class
 com\esea\model\Token.class
 com\esea\service\UserService.class
-com\esea\service\CustomerService.class
 com\esea\model\CustomerInfo.class
 com\esea\controller\ReportingApiController.class
 com\esea\response\ReportResponse.class

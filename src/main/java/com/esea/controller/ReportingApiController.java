@@ -4,7 +4,6 @@ import com.esea.model.*;
 import com.esea.response.LoginResponse;
 import com.esea.response.ReportResponse;
 import com.esea.response.TransactionQueryResponse;
-import com.esea.service.CustomerService;
 import com.esea.service.TransactionService;
 import com.esea.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,22 +14,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
 public class ReportingApiController {
 
     private UserService userService;
-    private CustomerService customerService;
     private TransactionService transactionService;
 
     public ReportingApiController(@Autowired UserService userService,
-                                  @Autowired CustomerService customerService,
                                   @Autowired TransactionService transactionService) {
         this.userService = userService;
         this.transactionService = transactionService;
-        this.customerService = customerService;
     }
 
     @GetMapping("/api/v3/client")
@@ -99,6 +94,9 @@ public class ReportingApiController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
 
+        if(reportRequest.getFromDate() == null || reportRequest.getToDate() == null){
+            return new ResponseEntity<>("From date and to date are mandatory", headers, HttpStatus.BAD_REQUEST);
+        }
         List<Report> reportList;
         try {
             if (userService.isValidToken(authorizationToken)) {
